@@ -1,0 +1,97 @@
+[
+  {
+    "line": 4,
+    "elements": [
+      {
+        "line": 9,
+        "name": "Acessar tela de cadastro",
+        "description": "",
+        "type": "background",
+        "keyword": "Contexto",
+        "steps": [
+          {
+            "result": {
+              "duration": 9764454900,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "que estou na tela de cadastro de usuário",
+            "match": {
+              "location": "CadastroUsuarioSteps.que_estou_na_tela_de_login()"
+            },
+            "keyword": "Dado "
+          }
+        ]
+      },
+      {
+        "line": 13,
+        "name": "Cadastrar usuário com sucesso",
+        "description": "",
+        "id": "cadastro-de-usuário-//essa-parte-não-é-obrigatória;cadastrar-usuário-com-sucesso",
+        "type": "scenario",
+        "keyword": "Cenário",
+        "steps": [
+          {
+            "result": {
+              "duration": 300598600,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "preencho todos os campos obrigatórios",
+            "match": {
+              "location": "CadastroUsuarioSteps.preencho_campos_obrigatorios()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 280600000,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "clico em cadastrar",
+            "match": {
+              "location": "CadastroUsuarioSteps.clico_cadastrar()"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 74459800,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "vejo mensagem de usuário cadastrado com sucesso",
+            "match": {
+              "location": "CadastroUsuarioSteps.vejo_mensagem_cadastro_sucesso()"
+            },
+            "keyword": "Então "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@cadastro_de_usuario"
+          },
+          {
+            "name": "@cadastro_usuario_sucesso"
+          }
+        ]
+      }
+    ],
+    "name": "Cadastro de usuário //essa parte não é obrigatória",
+    "description": "  Eu como usuário do sistema\n  Quero me cadastrar\n  Para finalizar uma compra no site //o para é o valor agregado ao que será entregue",
+    "id": "cadastro-de-usuário-//essa-parte-não-é-obrigatória",
+    "keyword": "Funcionalidade",
+    "uri": "src/test/resources/features/cadastro_usuario.feature",
+    "tags": [
+      {
+        "name": "@cadastro_de_usuario",
+        "type": "Tag",
+        "location": {
+          "line": 3,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
