@@ -1,68 +1,68 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("src/test/resources/features/cadastro_usuario.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("src/test/resources/features/login.feature");
 formatter.feature({
-  "name": "Cadastro de usuário //essa parte não é obrigatória",
-  "description": "  Eu como usuário do sistema\n  Quero me cadastrar\n  Para finalizar uma compra no site //o para é o valor agregado ao que será entregue",
+  "name": "Login",
+  "description": "   Eu como usuário do sistema\n   Quero fazer login\n   Para fazer uma compra no site",
   "keyword": "Funcionalidade",
   "tags": [
     {
-      "name": "@cadastro_de_usuario"
+      "name": "@login"
     }
   ]
 });
 formatter.background({
-  "name": "Acessar tela de cadastro",
+  "name": "Acessar tela de Login",
   "description": "",
   "keyword": "Contexto"
 });
 formatter.step({
-  "name": "que estou na tela de cadastro de usuário",
+  "name": "que estou na tela de login",
   "keyword": "Dado "
 });
 formatter.match({
-  "location": "CadastroUsuarioSteps.que_estou_na_tela_de_login()"
+  "location": "LoginSteps.que_estou_na_tela_de_login()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.scenario({
-  "name": "Cadastrar usuário com sucesso",
+  "name": "Login com sucesso",
   "description": "",
   "keyword": "Cenário",
   "tags": [
     {
-      "name": "@cadastro_de_usuario"
+      "name": "@login"
     },
     {
-      "name": "@cadastro_usuario_sucesso"
+      "name": "@login-sucesso"
     }
   ]
 });
 formatter.step({
-  "name": "preencho todos os campos obrigatórios",
-  "keyword": "E "
-});
-formatter.match({
-  "location": "CadastroUsuarioSteps.preencho_campos_obrigatorios()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "clico em cadastrar",
+  "name": "preencho login \"eduardo.finotti@qazando.com\" e senha \"123456\"",
   "keyword": "Quando "
 });
 formatter.match({
-  "location": "CadastroUsuarioSteps.clico_cadastrar()"
+  "location": "LoginSteps.preencho_login_e_senha(String,String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "vejo mensagem de usuário cadastrado com sucesso",
+  "name": "clico em Login",
+  "keyword": "E "
+});
+formatter.match({
+  "location": "LoginSteps.clico_em_Login()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "vejo mensagem de login com sucesso",
   "keyword": "Então "
 });
 formatter.match({
-  "location": "CadastroUsuarioSteps.vejo_mensagem_cadastro_sucesso()"
+  "location": "LoginSteps.vejo_mensagem_login_sucesso()"
 });
 formatter.result({
   "status": "passed"
