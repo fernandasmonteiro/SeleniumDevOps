@@ -1,5 +1,4 @@
-# Projeto de Automação de Testes - curso da Qazando 
-
+# Projeto de Automação de Testes 
 Projeto de Automação de Testes realizado em Java utilizando
 maven e jUnit para rodar os testes. 
 
