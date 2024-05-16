@@ -20,19 +20,15 @@ jobs:
           distributon: "adopt"
           cache: maven
 
-      - name:
-      - uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
       - name: Installar chrome
-      - uses: nanasess/setup-chromedriver@v2
-      - run: chromedriver --url-base=/wd/hub &
+        uses: nanasess/setup-chromedriver@v2
+
+      - name: Start Chromedriver
+        run: chromedriver --url-base=/wd/hub &
 
       - name: Run Test
-        run:   mvn test -Dtest=RunCucumber -Dbrowser=chrome-ci cluecumber-report:reporting
+        run: mvn test -Dtest=RunCucumber -Dbrowser=chrome-ci cluecumber-report:reporting
 
-
-
-
-
-
-      # Adicione mais etapas conforme necessário, como construção do aplicativo e implantação
