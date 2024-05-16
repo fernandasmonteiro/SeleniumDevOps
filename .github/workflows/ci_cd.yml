@@ -1,7 +1,7 @@
 name: CI/CD Pipeline
 
 on:
-  push:
+  pull_request:
     branches:
       - main  # Substitua 'main' pelo nome da sua branch principal, se for diferente
 
