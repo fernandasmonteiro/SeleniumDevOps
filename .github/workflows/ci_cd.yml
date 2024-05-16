@@ -1,7 +1,7 @@
 name: CI/CD Pipeline
 
 on:
-  push:
+  pull_request:
     branches:
       - main  # Substitua 'main' pelo nome da sua branch principal, se for diferente
 
@@ -13,25 +13,22 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Instalar Java 11
-        uses: actions/setup-java@v2
+      - name: Instalar Java 8
+        uses: actions/setup-java@v4
         with:
-          java-version: "11"
-          distributon: "adopt"
+          java-version: "8"
+          distribution: "adopt"
           cache: maven
 
-      - name:
-      - uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
-      - uses: nanasess/setup-chromedriver@v2
-      - run: chromedriver --url-base=/wd/hub &
+      - name: Installar chrome
+        uses: nanasess/setup-chromedriver@v2
+
+      - name: Start Chromedriver
+        run: chromedriver --url-base=/wd/hub &
 
       - name: Run Test
-        run:   mvn test -Dtest=RunCucumber -Dbrowser=chrome-ci cluecumber-report:reporting
+        run: mvn test -Dtest=RunCucumber -Dbrowser=chrome-ci cluecumber-report:reporting
 
-
-
-
-
-
-      # Adicione mais etapas conforme necessário, como construção do aplicativo e implantação
