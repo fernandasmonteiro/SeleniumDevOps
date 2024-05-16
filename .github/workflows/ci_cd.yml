@@ -14,10 +14,10 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Instalar Java 8
-        uses: actions/setup-java@v2
+        uses: actions/setup-java@v4
         with:
           java-version: "8"
-          distribution: "oracle"
+          distribution: "adopt"
           cache: maven
 
       - name: Checkout repository
